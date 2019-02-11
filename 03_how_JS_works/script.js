@@ -28,16 +28,13 @@ foo(); // age = 65(local variable)
 console.log(age); // age = 23(global variable)
 
 
-
-
-
 ///////////////////////////////////////
 // Lecture: Scoping
 
 
 // First scoping example
 
-/*
+
 var a = 'Hello!';
 first();
 function first() {
@@ -48,28 +45,32 @@ function first() {
         console.log(a + b + c);
     }
 }
-*/
+
 
 
 
 // Example to show the differece between execution stack and scope chain
 
-/*
+
 var a = 'Hello!';
 first();
+
 function first() {
     var b = 'Hi!';
-    second();
+  second();
+
     function second() {
         var c = 'Hey!';
         third()
     }
 }
+
 function third() {
     var d = 'John';
-    console.log(a + b + c + d);
+    // console.log(c); //c is undifined, cannot access variable c. cuz c is not located third() function's scope chain.
+    console.log(a + d)
 }
-*/
+
 
 
 
